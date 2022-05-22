@@ -1,0 +1,66 @@
+.registerform h4 {
+    text-align: center;
+}
+
+#themesBtn {
+    display: none;
+}
+
+.detailsflex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nameandcart {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hours {
+    margin: 4px;
+}
+
+.rentnow {
+    position: relative;
+    top: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.detailsing {
+    height: 250px;
+    width: 300px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.rentbtn {
+    background-color: green;
+    color: white;
+    border: 0px;
+    font-size: 18px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.balanceuser {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.topupaccount,
+h4 {
+    text-align: center;
+}
