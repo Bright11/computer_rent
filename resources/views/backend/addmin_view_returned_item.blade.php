@@ -43,7 +43,7 @@
                             @endif
                         </td>
                         <td>
-                            @if ($r->status=='waiting')
+                            @if ($r->status==1)
                             <a href="/admin_confirm/{{ $r->id }}/pro_id/{{ $r->Product->id }}/user_id/{{ $r->user_id }}" class="returned btn btn-warning">Confirem</a>
 
                             @else

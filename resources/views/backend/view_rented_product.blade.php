@@ -24,6 +24,7 @@
                     <th scope="col">Returning time</th>
                     <th scope="col">Hours</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Admin Status</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -43,14 +44,22 @@
                             @endif
                         </td>
                         <td>
-                            @if ($r->status==0)
+                            @if ($r->status==NULL)
                             <button class="btn btn-danger">Item not returned</button>
+                            @elseif ($r->status==1)
+                            <button class="btn btn-danger">Waiting</button>
                             @else
-                            <button class="btn btn-success">Item returned</button>
+                            <button class="btn btn-success">{{ $r->status }}</button>
+                        @endif
+                        </td>
+                        <td>
+                            @if ($r->admin_recieved==NULL)
+                            <button class="btn btn-danger">Not confirmed</button>
+                            @else
+                            <button class="btn btn-success">{{ $r->status }}</button>
                         @endif
                         </td>
                         <th>
-                            <a href="/edite_product/{{ $r->id }}" class="btn btn-warning">Edite</a>
                             <a href="/deletepro/{{ $r->id }}"><i class="bi bi-calendar-x-fill deleteicon mb-2"></i></a>
 
                         </th>

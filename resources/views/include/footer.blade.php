@@ -1,3 +1,6 @@
+@if (Request::path() == '/')
+@elseif (Request::path() == 'registration')
+@else
 <div  id="footerSection">
 	<div class="container">
 		<div class="row">
@@ -43,6 +46,6 @@
 	<script src="themes/js/bootshop.js"></script>
     <script src="themes/js/jquery.lightbox-0.5.js"></script>
 
-
+@endif
 </body>
 </html>

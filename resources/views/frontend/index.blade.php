@@ -25,7 +25,7 @@
                       <div class="caption">
                         <h5>{{ $p->product_name }}</h5>
                         <p>
-                          Lorem Ipsum is simply dummy text.
+                            {{Str::limit($p['description'],50,$end="...")}}
                         </p>
 
                         <h4 style="text-align:center"><a class="btn" href="/details/{{ $p->id }}">Rent now</a> <!--<a class="btn" href="#">Rent now <i class="icon-shopping-cart"></i></a>--> <a class="btn btn-primary" href="/details/{{ $p->id }}">Per hour:${{ $p->price }}</a></h4>

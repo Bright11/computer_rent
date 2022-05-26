@@ -14,26 +14,34 @@
         <div class="row admincontentrow">
             <div class="col-md-3 mt-4">
                <div class="admincontentflex">
-               <h6>number of goods</h6>
+               <h6>{{ $countuser }} <br>Number of user</h6>
                 <i class="bi bi-archive-fill adminmaincontenticon"></i>
                </div>
             </div>
             <div class="col-md-3 mt-4">
                 <div class="admincontentflex">
-                   @if(Session::has('user'))
+                 <h6>{{ $studentnumber }}<br>
+                  Number of student</h6>
                      <i class="bi bi-archive-fill adminmaincontenticon"></i>
-                     @endif
+
                     </div>
             </div>
             <div class="col-md-3 mt-4">
                 <div class="admincontentflex">
-                    <h6>{{ date('h:i:s A') }}</h6>
+                    <h6>{{ $nustaff }}<br>
+                        Number of Staff</h6>
                      <i class="bi bi-archive-fill adminmaincontenticon"></i>
                     </div>
             </div>
             <div class="col-md-3 mt-4">
                 <div class="admincontentflex">
-                    <h6></h6>
+                    <h6>{{ $cus }} <br>Number of Costumer </h6>
+                     <i class="bi bi-archive-fill adminmaincontenticon"></i>
+                    </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="admincontentflex">
+                    <h6>{{ $nupro }} <br>Number of Product </h6>
                      <i class="bi bi-archive-fill adminmaincontenticon"></i>
                     </div>
             </div>

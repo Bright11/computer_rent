@@ -57,7 +57,7 @@
                             <a href="/suspend_user/{{ $u->id }}" class="btn btn-warning">Suspend user</a>
                             @endif
                             <a href="/promot_user/{{ $u->id }}" class="btn btn-warning">Promote</a>
-                            <a href="{{ $u->id }}"><i class="bi bi-calendar-x-fill deleteicon mb-2"></i></a>
+                            <a href="/deleteuser/{{ $u->id }}"><i class="bi bi-calendar-x-fill deleteicon mb-2" title="delete"></i></a>
 
                         </th>
                       </tr>

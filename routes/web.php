@@ -30,6 +30,8 @@ Route::get('userprofil',[frontendController::class,'userprofil'])->name('userpro
 Route::get('credit_account',[frontendController::class,'credit_account'])->name('credit_account');
 Route::get('getcategory/{id}',[frontendController::class,'getcategory'])->name('getcategory');
 Route::get('newsearch',[frontendController::class,'newsearch'])->name('newsearch');
+Route::get('cus_returning_item',[frontendController::class,'cus_returning_item'])->name('cus_returning_item');
+Route::get('userconfirmedreturn',[frontendController::class,'userconfirmedreturn'])->name('userconfirmedreturn');
 
 
 Route::post('rentnow/{id}',[addtodbController::class,'rentnow'])->name('rentnow');
@@ -63,6 +65,6 @@ Route::get('suspend_user/{id}',[loginController::class,'suspend_user'])->name('s
 Route::get('unband_user/{id}',[loginController::class,'unband_user'])->name('unband_user');
 Route::get('promot_user/{id}',[loginController::class,'promot_user'])->name('promot_user');
 Route::put('promotusertodb/{id}',[loginController::class,'promotusertodb'])->name('promotusertodb');
-
+Route::get('deleteuser/{id}',[loginController::class,'deleteuser'])->name('deleteuser');
 
 Route::get('logout',[loginController::class,'logout'])->name('logout');

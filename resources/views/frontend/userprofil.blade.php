@@ -1,79 +1,98 @@
 @extends('include.master')
+<!---hearder-->
+<!--navbar-->
 
+<!-- Header End====================================================================== -->
 @section('content')
-
+<!--slider-->
 
 <div id="mainBody">
 	<div class="container">
 	<div class="row">
+<!-- Sidebar ================================================== -->
+<div id="sidebar" class="span3">
+<style>
+    .userproli{
+        margin-bottom: 5px;
+    }
+</style>
+    <ul id="sideManu" class="nav nav-tabs nav-stacked">
+        <li class="subMenu open"><a> Computers</a>
+            <ul>
 
+               <li class="subMenu userproli"> <a href="{{ route('credit_account') }}" >Credit Account</a></li>
+                <li class="subMenu userproli"><a href="{{ route('cus_returning_item') }}" >Return</a></li>
+              <li class="subMenu userproli">  <a href="{{ route('userconfirmedreturn') }}" >Complete process</a></li>
+
+
+
+            </ul>
+        </li>
+
+    </ul>
+    <br/>
+
+
+
+</div>
+
+<!-- Sidebar end=============================================== -->
 		<div class="span9">
 			<div class="well well-small">
-                <h5>My rented information</h5>
-                <div style="overflow-x:auto;">
-                   <div class="balanceuser">
-                    <a href="{{ route('credit_account') }}" class="btn btn-success">Credit Account</a>
-                    <button class="btn btn-success">My balance $ {{ number_format($mybalance) }}</button>
-                   </div>
+			<!--featured product is here-->
+<style>
+    .userptostyle{
+        font-size: 20px;
+    }
+</style>
+		<h4>My Dashboard</h4>
+			  <ul class="thumbnails">
 
-                    <table>
-                    <tr>
-                        <th>Computer name</th>
-                        <th>Price</th>
-                        <th>Rented time</th>
-                        <th>Returning time</th>
-                        <th>Hours rented</th>
-                        <th>Price paid</th>
-                        <th>Status</th>
-                        <th>Received</th>
-                      </tr>
-                      @forelse ($userinfo as $uinfo)
-                      <tr>
-                        <td>{{ $uinfo->Product->product_name }}</td>
-                        <td>{{ number_format($uinfo->Product->price) }}</td>
-                        <td>{{ $uinfo->time_rented }}</td>
-                        @if ($h>$uinfo->returning_time)
-                        <td><a href=""class="btn btn-danger">{{ $uinfo->returning_time }}</a></td>
-                        @else
-                            <td><a href=""class="btn btn-success">{{ $uinfo->returning_time }}</a></td>
-
-                        @endif
-                        @if ($uinfo->hours_rented==1)
-                        <td>{{ $uinfo->hours_rented }} Hour</td>
-                        @else
-                        <td>{{ $uinfo->hours_rented }} Hours</td>
-                        @endif
-                        <td>{{ number_format($uinfo->price_paid) }}</td>
-                        <td>
-                            @if ($uinfo->status==1)
-                            <a href="#" @disabled(true) class="btn btn-danger">Returned</a>
-                            @else
-                            <a href="#" @disabled(true) class="btn btn-success">{{ $uinfo->status }}</a>
-
-                            @endif
-                           </td>
-                        <td>
-                        @if ($uinfo->admin_recieved=='Received')
-                        <a href="#" @disabled(true) class="btn btn-success">Received</a>
-                        @else
-
-                        <a href="#" @disabled(true) class="btn btn-warning">Not Received</a>
-
-                        @endif
-                    </td>
-
-                      </tr>
-                      @empty
-                      <td>No information for now!</td>
-                      @endforelse
-
-
-                    </table>
-                  </div>
-
+                <li class="span3">
+                    <div class="thumbnail userptostyle">
+                      <a  href="#"></a>
+                      <div class="caption">
+                        <h5>Total rented items</h5><br>
+                        <p>{{ $usertotaiitem }}</p>
+                      </div>
                     </div>
+                  </li>
 
 
+                  <li class="span3">
+                    <div class="thumbnail userptostyle">
+                      <a  href="#"></a>
+                      <div class="caption">
+                        <h5>Unreturned items</h5><br>
+                        <p>{{ $unreturnitems }}</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="span3">
+                    <div class="thumbnail userptostyle">
+                      <a  href="#"></a>
+                      <div class="caption">
+                        <h5>Number of confirmed returns</h5><br>
+                        <p>{{ $totalconfirmitem }}</p>
+
+                      </div>
+                    </div>
+                  </li>
+                  <li class="span3">
+                    <div class="thumbnail userptostyle">
+                      <a  href="#"></a>
+                      <div class="caption">
+                        <h5>My Insurance</h5><br>
+                        <p>$:{{ $insur }}</p>
+
+                      </div>
+                    </div>
+                  </li>
+
+
+			  </ul>
+<h6 class="btn btn-success">My balance $ {{ number_format($mybalance) }}</h6>
 		</div>
 		</div>
 	</div>

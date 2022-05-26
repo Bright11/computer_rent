@@ -16,7 +16,7 @@
 					<a href="/details/{{ $sli->id }}"><img src="{{ asset('product/'.$sli->image) }}"style="height: 150px;" alt=""></a>
 					<div class="caption">
 					  <h5>{{ $sli->product_name }}</h5>
-					  <h4><a class="btn" href="/details/{{ $sli->id }}">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h4><a class="btn" href="/details/{{ $sli->id }}">VIEW</a> <span class="pull-right">${{ $sli->price }}</span></h4>
 					</div>
 				  </div>
 				</li>

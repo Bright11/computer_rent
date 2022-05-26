@@ -10,7 +10,7 @@
 	<div class="container">
 <!--register-->
 
-<div class="span9">
+<div class="span9" style="width:100%;">
 
 	<div class="well">
         @if (Session::has('status'))
@@ -21,21 +21,24 @@
     @endforeach
 
         @endif
+<style>
 
+</style>
 	<form class="form-horizontal registerform" action="{{ route('loginnow') }}" method="post">
         @csrf
-		<h4> Login:/Your personal information</h4>
+
+		<h4> UTAS Computer Rental Services</h4>
 
 
 		 <div class="control-group">
-			<label class="control-label" for="inputLnam">Email address <sup>*</sup></label>
 			<div class="controls">
+                <label for="inputLnam">Email address <sup>*</sup></label>
 			  <input type="email" name="email" placeholder="email@domain.com">
 			</div>
 		 </div>
 		<div class="control-group">
-		<label class="control-label" for="input_email">Password <sup>*</sup></label>
 		<div class="controls">
+            <label for="input_email">Password <sup>*</sup></label>
 		  <input type="password" name="password" placeholder="password">
 		</div>
 	  </div>

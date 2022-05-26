@@ -16,18 +16,20 @@
         <hr>
         <h5>Price:${{ $detail->price }} <span>Per hour</span> </h5>
         <hr>
+        <p>An amount of $:50.00 will be deducted from your account and will be returned back<br> to you you returned the item</p>
+        <p>this amonut will be calculated accordind to hours you rent</p>
+        <h5>Total price:${{ $detail->price +$insurance}} <span>Per hour</span> </h5>
+        <hr>
         <div class="nameandcart">
 
         <div class="hours">
+
             <p>Choose hours to use</p>
             <form action="/rentnow/{{ $detail->id }}" method="post">
+                <input type="number" required name="hours_rented" placeholder="hours to rent">
                 @csrf
-            <select name="hours_rented">
-                <option value="1">1 Hour</option>
-                <option value="2">2 Hours</option>
-                <option value="3">3 Hours</option>
-            </select>
         </div>
+
         <div class="rentnow">
         <button class="rentbtn">Rent Now</button>
         </div>

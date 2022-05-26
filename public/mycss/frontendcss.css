@@ -64,3 +64,54 @@ td {
 h4 {
     text-align: center;
 }
+
+.registerform {
+    position: relative;
+    text-align: center
+}
+
+.registerform h4 {
+    position: relative;
+    left: 70px;
+    right: 30px;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+
+/*user profile page*/
+
+.userprofilrflex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.userflexchildren {
+    border: 3px;
+    border-color: blueviolet;
+    box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+    height: 150px;
+    background-color: #212640;
+    width: 150px auto;
+    margin-bottom: 8px;
+}
+
+.userflexchildren h2 {
+    position: relative;
+    top: 50px;
+    bottom: 50px;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.userflexchildren h3 {
+    position: relative;
+    color: white;
+    font-size: 20px;
+}

@@ -20,8 +20,8 @@ class CreateRentedItemsTable extends Migration
             $table->string('time_rented');
             $table->string('hours_to_use');
             $table->string('price_paid');
-            $table->string('status')->default('0');
-            $table->string('admin_recieved')->default('0');
+            $table->string('status')->nullable();
+            $table->string('admin_recieved')->nullable();
             $table->string('admin_id')->nullable();
             $table->timestamps();
         });

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Computer ecommerce</title>
+    <title>@yield('title')"Computer ecommerce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,8 +14,6 @@
 <link href="{{ asset('themes/css/font-awesome.css')}}" rel="stylesheet" type="text/css">
 <!-- Google-code-prettify -->
 <link href="{{asset('themes/js/google-code-prettify/prettify.css')}}" rel="stylesheet"/>
-<!-- fav and touch icons -->
-<!--<link rel="shortcut icon" href="{//{asset('themes/images/ico/favicon.ico')}}">-->
 
 <link rel="stylesheet" href="{{ asset('mycss/frontendcss.css') }}">
 </head>
